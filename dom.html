@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom manip</title>
+  </head>
+  <body>
+    <h1 class="verde">Manipulación del DOM básica</h1>
+    <p targetta="life">Esto es un párrafo LIFE</p>
+    <p class="parrafito">Esto es un párrafo con clase</p>
+    <p id="pid">Esto es un párrafo con ID pid</p>
+    <input placeholder="Escribe algo aquí" />
+
+    <script>
+      // h1 { color: red }
+      // .parrafito { ... }
+      // #pid { ... }
+
+      const h1 = document.querySelector("h1");
+      const p = document.querySelector("p");
+      const parrafito = document.getElementsByClassName("parrafito");
+      const pid = document.getElementById("pid");
+      const input = document.querySelector("input");
+
+      console.log(input.value);
+
+      console.log({
+        h1,
+        p,
+        parrafito,
+        pid,
+        input,
+      });
+
+      h1.innerHTML = "Patito <br> Feo";
+      h1.innerText = "Patito <br> Feo";
+       console.log('nombre-de-clase '+ h1.getAttribute('class'));
+    //   h1.setAttribute('class', 'rojo');
+
+      h1.classList.add("rojo");
+      h1.classList.remove("verde");
+      // h1.classList.toggle('verde');
+      // h1.classList.contains('verde');
+
+      input.value = "456";
+
+      const img = document.createElement("img");
+      img.setAttribute(
+        "src",
+        "https://static.platzi.com/static/images/conf/logo_black@2x.png"
+      );
+      console.log(img);
+
+      pid.innerHTML = "";
+      pid.appendChild(img);
+
+    //   Acceder a un atributo 
+   
+
+
+    </script>
+  </body>
+</html>

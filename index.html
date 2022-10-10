@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*   let respuesta;
+        w hile(respuesta != '4'){
+            let pregunta = prompt(`¿Cuanto es 2 + 2`)
+            respuesta = pregunta;
+        } */
+
+      let obj = {
+        make: "Ford",
+        model: "Mustang",
+        year: 1969,
+      };
+
+      function impelxelObj(obj) {
+        const arr = Object.values(obj);
+        console.log("array", arr); // ford mustang 1969
+        for (let i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+      }
+      console.log(impelxelObj(obj));
+      /* for(let i in obj){
+        // console.log("Metodo in " + obj[i]);
+        console.log(`${i} : ${obj[i]}` );
+      } */
+
+      const tiposDeSuscripciones = {
+        free: "Solo puedes tomar los cursos gratis",
+        basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+        expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+        expertPlus:
+          "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+      };
+
+      function encontrarSuscripcion(suscripcion) {
+        if(tiposDeSuscripciones[suscripcion]){
+            return tiposDeSuscripciones[suscripcion]
+        }else{
+          console.warn('No ha esa opción')
+        }
+
+        } ;
+     console.log( encontrarSuscripcion('free'))
+    </script>
+  </body>
+</html>
